@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Before and After Psudo Selectors</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        color: black;
+      }
+      .navigation {
+        font-family: "Edu VIC WA NT Beginner", cursive;
+        font-size: 20px;
+        display: flex;
+      }
+      header::before {
+        background: url("https://images.unsplash.com/photo-1659020693147-59b56c1d9c92?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=775&q=80")
+          no-repeat center/cover;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.7;
+      }
+      li {
+        list-style: none;
+        padding: 34px 23px;
+      }
+      section {
+        height: 344px;
+        margin: 3px 23px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      h1 {
+        font-size: 4rem;
+        font-family: "Edu VIC WA NT Beginner", cursive;
+      }
+      p {
+        text-align: center;
+      }
+      section::before {
+        content: "This is a Content";
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul class="navigation">
+          <li class="item">Home</li>
+          <li class="item">About</li>
+          <li class="item">Services</li>
+          <li class="item">Contact Us</li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <h1>Welcome to Coding World</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et sed
+        distinctio non laboriosam ut ducimus, ea quam illo similique nostrum
+        accusantium quisquam dolore fuga, modi repellendus aliquid reprehenderit
+        ab veniam minima blanditiis est? Eum.
+      </p>
+    </section>
+  </body>
+</html>
